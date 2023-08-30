@@ -32,9 +32,7 @@ app.get("/albums", function (req, res) {
 
 app.get("/albums/:albumId", function (req, res) {
   const albumToFind = req.params.albumId;
-  console.log(req.params.albumId);
   const album = albumsData.find((album) => album.albumId === albumToFind);
-  //console.log(album);
   res.status(200).send({ album });
 });
 
